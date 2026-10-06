@@ -1,0 +1,28 @@
+{
+  "name": "fieldlink-construction-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "server": ".venv/bin/python -m server.app",
+    "prepare:data": ".venv/bin/python scripts/prepare_demo.py",
+    "test": ".venv/bin/python -m unittest discover -s tests -v",
+    "test:browser": "node tests/browser.mjs",
+    "prepare:media": ".venv/bin/python scripts/prepare_media.py",
+    "prepare:evidence": ".venv/bin/python scripts/prepare_evidence.py"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "4.7.0",
+    "lucide-react": "0.468.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "three": "0.180.0",
+    "vite": "6.4.3"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  }
+}

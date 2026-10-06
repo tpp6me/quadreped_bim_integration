@@ -1,0 +1,84 @@
+[
+  {
+    "id": "intro",
+    "title": "From robot footage to automatic issues",
+    "sentences": [
+      "Fieldlink analyzes robot captured footage, flags candidate problems, and creates highlighted issues linked to a building information model.",
+      "This demonstration uses real factory videos, local computer vision models, and representative BIM locations."
+    ]
+  },
+  {
+    "id": "automatic",
+    "title": "01 / Detection \u2192 segmentation \u2192 issue",
+    "sentences": [
+      "The system samples the recordings automatically. The current check looks for possible dark cables near the floor.",
+      "Object detection locates the item, segmentation generates its outline, and the matching check creates an issue. No reviewer needs to draw a box or create the issue."
+    ]
+  },
+  {
+    "id": "pipeline",
+    "title": "Automatic evidence creation / actual model outputs",
+    "sentences": [
+      "Here is the original frame sampled from the robot's video.",
+      "Grounding DINO automatically detects the cable and returns this bounding box.",
+      "SAM generates the segmentation mask, highlighting the cable itself.",
+      "The system creates the issue with both highlights and its source evidence attached. It is already waiting for review."
+    ]
+  },
+  {
+    "id": "detection",
+    "title": "02 / Open an issue that already has its evidence",
+    "sentences": [
+      "This issue was created automatically. The detection box and segmentation mask already identify the cable in the original frame.",
+      "We can switch between the original and highlighted views. The model score measures detection strength, not the probability of a hazard."
+    ]
+  },
+  {
+    "id": "context",
+    "title": "03 / Connect the finding to project context",
+    "sentences": [
+      "The issue keeps its source clip and timestamp, alongside a linked location in the model.",
+      "For this demo, clip locations are representative assignments. A project deployment needs registered camera locations and the actual BIM."
+    ]
+  },
+  {
+    "id": "review",
+    "title": "04 / Review the finding, not create it",
+    "sentences": [
+      "The reviewer now checks an existing finding. They can confirm it, dismiss a false positive, or optionally correct the highlight.",
+      "Here, we confirm the visible cable and record that access requirements still need checking. The original automated detection remains traceable."
+    ]
+  },
+  {
+    "id": "assign",
+    "title": "05 / Assign the follow-up action",
+    "sentences": [
+      "After confirming the issue, we assign a responsible team and due date.",
+      "Resolution still requires follow up evidence, and closure requires verification. Automatic detection does not establish that corrective work is complete."
+    ]
+  },
+  {
+    "id": "export",
+    "title": "06 / Share the issue and its evidence",
+    "sentences": [
+      "The handoff includes the PDF punch list, a B C F issue archive, the I F C model, and a source manifest.",
+      "Automatic findings and reviewed issues keep their distinct statuses. B C F schemas are validated; independent BIM application import remains pending."
+    ]
+  },
+  {
+    "id": "report",
+    "title": "07 / Preserve the original and the generated highlight",
+    "sentences": [
+      "The report includes the generated highlight, source timestamp, model reference, and review history.",
+      "The original image is preserved separately. Model identifiers and scores explain how the system produced the finding."
+    ]
+  },
+  {
+    "id": "outro",
+    "title": "The next step: validated construction monitoring",
+    "sentences": [
+      "For a construction deployment, expand and validate the checks on project footage, then connect them to actual BIM and schedule data.",
+      "Repeat captures and agreed completion rules can support progress reporting. This demo automates candidate issue detection, highlighting, and creation; it does not measure construction completion."
+    ]
+  }
+]
